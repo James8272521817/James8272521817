@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Lesson 1: Geologic Time Scale</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+<body> 
+    <div class="container"> 
+        <div id="header">
+            <div id="backArrow" onclick="goBackToSelection()"><-- Back</div>
+            <div id="historyIcon" onclick="showReviewHistory()">History #</div>
+        </div>
+        <h1>Lesson 1: Geologic Time Scale</h1> 
+        
+        <div id="difficulty-selection"> 
+            <button onclick="startQuiz('easy')">Easy</button> 
+            <button onclick="startQuiz('average')">Average</button> 
+            <button onclick="startQuiz('hard')">Hard</button> 
+        </div> 
+        
+        <div id="quiz-section" style="display: none;"> 
+            <!-- Results History -->
+            <div id="resultsHistory" class="results-history"></div>
+            
+            <p id="question"></p> 
+            <div id="options"> 
+                <button class="option" onclick="answer('A')" id="optionA">A</button> 
+                <button class="option" onclick="answer('B')" id="optionB">B</button> 
+                <button class="option" onclick="answer('C')" id="optionC">C</button> 
+                <button class="option" onclick="answer('D')" id="optionD">D</button> 
+            </div> 
+
+            <div id="loader-container">
+                <div id="loader"></div>
+            </div>
+            <p id="remainingTime">Time Left: 0s</p> <!-- Display remaining time -->
+
+            <button id="skipButton" style="display:none;" onclick="skipTimer()">Skip</button>
+        </div> 
+
+        <div id="history-section" style="display: none;"> <!-- Review Quiz Answers Section -->
+            <h2>Review Quiz</h2>
+            <div id="quizSummary"></div>
+            <ul id="historyList"></ul>
+            <button onclick="goBackToSelection()">Back</button> <!-- Back Button -->
+        </div>
+    </div> 
+    <script src="script.js"></script> 
+</body>
+</html>
