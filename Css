@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Soft black + blue gradient */
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(60, 60, 60, 0.85); /* Grey with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Light grey for header */
+}
+
+button {
+    margin: 10px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(80, 80, 80, 0.7); /* Grey button */
+    color: #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(100, 100, 100, 0.7); /* Slightly lighter grey on hover */
+}
+
+#quiz-section {
+    margin-top: 20px;
+}
+
+.results-history {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#loader-container {
+    width: 100%;
+    height: 12px;
+    background-color: rgba(100, 100, 100, 0.6); /* Light grey background for loader */
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#loader {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(150, 150, 150, 0.8); /* Lighter grey for loader bar */
+    transition: width linear;
+}
+
+#remainingTime {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.option.correct {
+    background-color: rgba(76, 175, 80, 0.7); /* Green for correct answers */
+    color: #fff;
+}
+
+.option.incorrect {
+    background-color: rgba(244, 67, 54, 0.7); /* Red for incorrect answers */
+    color: #fff;
+}
+
+#backArrow {
+    font-size: 18px;
+    cursor: pointer;
+    color: rgba(150, 150, 150, 0.8);
+}
+
+#historyIcon {
+    font-size: 18px;
+    cursor: pointer;
+    color: rgba(150, 150, 150, 0.8);
+}
+
+#history-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#history-section ul li {
+    background-color: rgba(80, 80, 80, 0.6); /* Grey background for history items */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#history-section ul li:hover {
+    background-color: rgba(100, 100, 100, 0.7);
+}
+
+#skipButton {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: rgba(100, 100, 100, 0.8); /* Grey with transparency */
+}
